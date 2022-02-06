@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "adelia";
+  src: url("../public/fonts/adelia.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSansThaiLooped-Bold";
+  src: url("../public/fonts/IBMPlexSansThaiLooped-Bold.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSansThaiLooped-Thin";
+  src: url("../public/fonts/IBMPlexSansThaiLooped-Thin.ttf");
+}
+
 html,
 body {
   padding: 0;
@@ -25,7 +40,7 @@ a {
   height: 70px;
   align-items: center;
   align-content: center;
-  background-color: #ffce85;
+  background-color: #0000;
 
   .nav-left{
     flex-grow: 1;
@@ -47,6 +62,7 @@ a {
         width: 100px;
         font-weight: 100;
         cursor: pointer;
+        color: #ffff;
 
         :hover{
           color: #f29100;
@@ -64,10 +80,6 @@ a {
         color: #f29100;
         font-weight: 700;
 
-        .nav-single{
-          
-        }
-
         &:hover{
           .nav-hover-list{
             display: block;
@@ -83,7 +95,7 @@ a {
           background-color: #f29100;
           margin-top: 22px;
           border-bottom-right-radius: 30px;
-          color: black;
+          color: #ffff;
   
           .nav-link{
             width: 200px;
@@ -127,7 +139,7 @@ a {
 
       .nav-signup{
         .connect-btn{
-          color: black;
+          color: #ffff;
           background-color: #f29100;
           width: 120px;
           font-size: 20px;
@@ -148,3 +160,199 @@ a {
   }
 }
 
+
+
+/*------------------------------------------------------------------------------------------------------------------
+                                              Index
+------------------------------------------------------------------------------------------------------------------*/
+
+.index{
+  .index-image-main{
+    width: 100%;
+
+    span{
+      width: 100% !important;
+      height: 845px !important;
+      z-index: -1 !important;
+    }
+  }
+  
+  .index-floats{
+    width: 400px;
+    margin-top: 260px;
+    margin-left: 100px;
+
+    .index-text{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      top: 200px;
+  
+      .index-text1{
+        font-family: "IBMPlexSansThaiLooped-Thin";
+        font-size: 37px;
+        font-weight: 100;
+        color: #ffc685;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .index-packages{
+    float: right;
+    margin-top: 235px;
+    width: inherit;
+
+    .package-list{
+      display: flex;
+    }
+  }
+
+  .index-levels{
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 97%;
+
+
+    .index-levels-left{
+      width: 50%;
+
+      .levels-left-top{
+        font-size: 150px;
+        font-family: 'IBMPlexSansThaiLooped-Bold';
+        color: #f29100;
+        margin-bottom: -243px;
+        margin-left: 20px;
+      }
+
+      .levels-left-middle{
+        width: 710px;
+        height: 362px;
+        margin-left: 5px;
+      }
+      .levels-left-bottom{
+        font-size: 150px;
+        font-family: 'IBMPlexSansThaiLooped-Bold';
+        color: #f29100;
+        margin-top: -53px;
+      }
+    }
+
+    .index-levels-right{
+      width: 50%;
+      font-family: 'IBMPlexSansThaiLooped-Thin';
+      padding: 30px;
+
+      .index-levels-right-sub{
+        margin: 0 auto;
+        width: 90%;
+        background-color: #f29100;
+        border-radius: 40px;
+
+        .index-right-heads{
+          display: flex;
+          padding: 20px;
+          
+          .index-head{
+            padding: 0 20px 0 10px;
+            font-size: 25px;
+            color: white;
+          }
+        }
+        .index-right-content{
+          height: 420px;
+          .tier-box{
+            border: 1px solid white;
+            margin: 0 auto;
+            width: 90%;
+            padding: 10px 20px;
+            border-radius: 40px;
+
+            .sub-tiers{
+              
+              .tier-title{
+                font-size: 18px;
+                color: #ffff;
+                font-weight: bolder;
+              }
+              .tier-detail{
+                color: #ffff;
+                background-color: black;
+                border-radius: 20px;
+                padding: 5px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .index-standings{
+    background-image: url("../public/images/Artboard31.jpg");
+    height: 400px;
+    margin: 0 auto;
+    z-index: -1;
+    font-family: 'IBMPlexSansThaiLooped-Thin';
+    background-repeat: no-repeat;
+
+    .standing-holder{
+      margin: 0 auto;
+      width: 95%;
+
+      .standing-align{
+        display: flex;
+        align-items: center;
+        align-content: center;
+
+        .standing-left{
+          width: 50%;
+          margin-top: 20px;
+          border: 1px solid white;
+          padding: 20px;
+          border-radius: 30px;
+
+          .standing-left-box{
+            .standing-box-align{
+              .standing-box-header{
+                color: #ffc685;
+                font-size: 20px;
+                padding-left: 25px;
+              }
+
+              .inner-box{
+                margin: 0 auto;
+                width: 90%;
+                border: 1px solid #fff;
+                border-radius: 30px;
+                overflow: hidden;
+
+                .standing-images{
+                  display: flex;
+                  align-items: center;
+                  align-content: center;
+                  margin: 40px 40px 5px 40px;
+                }
+
+                .standing-description{
+                  color: white;
+                  font-size: 15px;
+                  padding: 0px 30px 30px 30px;
+                  
+                }
+              }
+            }
+          }
+        }
+        .standing-right{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
