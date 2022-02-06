@@ -3,13 +3,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { Web3Modal } from "web3modal"
-
+import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { ContractAddress } from '../config'
+import CrypTripABI from '../ABI/CrypTripABI.json'
+import { useState } from 'react'
 
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  const [acc, setAcc] = useState("")
 
   async function onInit() {
     if(typeof web3 !== 'undefined'){
@@ -29,6 +34,8 @@ function MyApp({ Component, pageProps }) {
       return null;
     }
   }
+
+  onInit();
 
 
   return (
@@ -57,14 +64,17 @@ function MyApp({ Component, pageProps }) {
                   Dashborad
                 </div>
                 <div className='nav-hover-list' >
-                <div className='nav-link sub' style={ (router.pathname) === "/user-info" ?   { color:"#f29100", fontWeight:'700' } : null }>
+                <div className='nav-link sub' style={ (router.pathname) === "/user-info" ?   { color:"white !important", fontWeight:'700' } : null }>
                   <Link href="/user-info">User Info</Link>
                 </div>
-                <div className='nav-link sub' style={ (router.pathname) === "/collection" ?   { color:"#f29100", fontWeight:'700' } : null }>
+                <div className='nav-link sub' style={ (router.pathname) === "/collection" ?   { color:"white !important", fontWeight:'700' } : null }>
                   <Link href="/collection">My Collection</Link>
                 </div>
-                <div className='nav-link sub' style={ (router.pathname) === "/create" ?   { color:"#f29100", fontWeight:'700' } : null }>
+                <div className='nav-link sub' style={ (router.pathname) === "/create" ?   { color:"white !important", fontWeight:'700' } : null }>
                   <Link href="/create">Create NFT</Link>
+                </div>
+                <div className='nav-link sub' style={ (router.pathname) === "/add-hotel" ?   { color:"white !important", fontWeight:'700' } : null }>
+                  <Link href="/add-hotel">Add Hotel</Link>
                 </div>
               </div>
               </div>
@@ -75,7 +85,13 @@ function MyApp({ Component, pageProps }) {
 
             </div>
             <div className='nav-signup'>
-              <button className='connect-btn'>Connect</button>
+              {
+                acc 
+                ?
+                  <div style={{ fontSize:"15px", width:"200px", overflow:"hidden", textOverflow:"ellipsis", color:"#f29100" }}>{acc}</div>
+                :
+                <button className='connect-btn' onClick={()=>{ onInit() }}>Connect</button>
+              }
             </div>
           </div>
         </div>
