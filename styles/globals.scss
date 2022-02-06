@@ -1,0 +1,150 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*------------------------------------------------------------------------------------------------------------------
+                                              NavBar
+------------------------------------------------------------------------------------------------------------------*/
+
+
+.navs{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  align-content: center;
+  background-color: #ffce85;
+
+  .nav-left{
+    flex-grow: 1;
+    padding:0 20px;
+  }
+
+  .nav-right{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-size: 22px;
+
+    .nav-links{
+      display: flex;
+      align-items: center;
+      align-content: center;
+
+      .nav-link{
+        width: 100px;
+        font-weight: 100;
+        cursor: pointer;
+
+        :hover{
+          color: #f29100;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .nav-dashboard{
+      padding: 22px 0;
+      margin-left: 22px;
+
+      .nav-dashboard-options{
+        padding:0 10px;
+        color: #f29100;
+        font-weight: 700;
+
+        .nav-single{
+          
+        }
+
+        &:hover{
+          .nav-hover-list{
+            display: block;
+            transition: all 3s ease-in;
+          }
+        }
+
+
+
+        .nav-hover-list{
+          display: none;
+          position: absolute;
+          background-color: #f29100;
+          margin-top: 22px;
+          border-bottom-right-radius: 30px;
+          color: black;
+  
+          .nav-link{
+            width: 200px;
+            font-weight: 100;
+
+            &:hover{
+              color: #ffce85;
+              font-weight: 700;
+            }
+          }
+
+          .sub{
+            padding: 10px 10px;
+
+            a{
+              &:hover{
+                color: #ffce85;
+                font-weight: 700;
+              }
+            }
+          }
+  
+          .sub:nth-child(even){
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+          }
+        }
+      }
+
+      &:hover{
+        .nav-hover-list{
+          display: block;
+          transition: all 1s ease-in;
+        }
+      }
+    }
+    .nav-member{
+      padding: 0 20px;
+      width: 200px;
+      text-align: right;
+
+      .nav-signup{
+        .connect-btn{
+          color: black;
+          background-color: #f29100;
+          width: 120px;
+          font-size: 20px;
+          font-weight: 100;
+          border: 1px solid #f29100;
+          padding: 5px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+
+        :hover{
+          box-shadow: 0 0 10px #f29001;
+          color: #ffce85;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
